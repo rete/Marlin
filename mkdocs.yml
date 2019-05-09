@@ -3,4 +3,12 @@ nav:
     - Home: index.md
     - About:
       - License: 'about/license.md'
+      - Contribute: 'about/contribute.md'
+    - Documentation:
+      - Doxygen: 'doxygen/index.html'
+plugins:
+  - doxygen:
+      packages:
+        - doxygen:
+            url : doc/
 theme: readthedocs
