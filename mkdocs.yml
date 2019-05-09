@@ -1,4 +1,6 @@
 site_name: Marlin
 nav:
     - Home: index.md
+    - About:
+      - License: 'about/license.md'
 theme: readthedocs
