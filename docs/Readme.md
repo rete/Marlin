@@ -30,7 +30,7 @@ mkdocs gh-deploy -r fork
 
 Your doc will be deploy at `https://username.github.io/Marlin/`.
 
-If your admin in the iLCSoft collaboration or have the push acces on the `iLCSoft/Marlin` repository, you can also deploy the doc:
+If you are admin in the iLCSoft collaboration or have the push access on the `iLCSoft/Marlin` repository, you can also deploy the doc:
 
 ```shell
 cd Marlin
