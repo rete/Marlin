@@ -37,7 +37,11 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
         <a href="." class="icon icon-home"> Marlin</a>
-        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
@@ -49,7 +53,21 @@
     <a class="current" href=".">Home</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#marlin-modular-analysis-and-reconstruction-for-the-linear-collider">Marlin - Modular Analysis and Reconstruction for the LINear Collider</a></li>
+    <li class="toctree-l2"><a href="#marlin-documentation">Marlin documentation</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#looking-for-something-in-particular">Looking for something in particular?</a></li>
+        
+            <li><a class="toctree-l3" href="#you-want-to-install-the-marlin-software">You want to install the Marlin software?</a></li>
+        
+            <li><a class="toctree-l3" href="#you-are-new-to-marlin">You are new to Marlin ?</a></li>
+        
+            <li><a class="toctree-l3" href="#you-are-developing-a-marlin-processor">You are developing a marlin Processor ?</a></li>
+        
+            <li><a class="toctree-l3" href="#you-want-to-port-your-processor-to-multi-threading">You want to port your processor to multi-threading ?</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -76,13 +94,46 @@
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">Documentation</span>
+    <span class="caption-text">User manual</span>
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="doxygen/index.html">Doxygen</a>
+    <a class="" href="user-manual/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-manual/installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-manual/getting-started/">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-manual/geometry/">Geometry</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-manual/data-source/">Data source</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-manual/xml-parser/">XML parser</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-manual/processor-api/">Processor API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-manual/marlin-mt/">Multi-threading with MarlinMT</a>
                 </li>
     </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="doxygen/index.html">Reference manual</a>
 	    </li>
           
         </ul>
@@ -117,8 +168,35 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="marlin-modular-analysis-and-reconstruction-for-the-linear-collider">Marlin - Modular Analysis and Reconstruction for the LINear Collider</h1>
-<p>Hello world !</p>
+                <h1 id="marlin-documentation">Marlin documentation</h1>
+<p>Welcome to the official Marlin framework documentation! In these pages you can find different levels of documentation.</p>
+<ul>
+<li><a href="doxygen/index.html">The reference manual</a> (Doxygen doc)</li>
+<li><a href="user-manual/introduction">The user manual</a></li>
+<li>General information on the project</li>
+</ul>
+<p>The source of Marlin are hosted on GitHub at <a href="https://github.com/iLCSoft/Marlin">https://github.com/iLCSoft/Marlin</a>.</p>
+<p>See <a href="about/contribute/">"contribute"</a> for issue tracking and pull requests.</p>
+<h3 id="looking-for-something-in-particular">Looking for something in particular?</h3>
+<p>Use the search engine at the top left corner of this page!</p>
+<h3 id="you-want-to-install-the-marlin-software">You want to install the Marlin software?</h3>
+<p>Checkout our <a href="user-manual/installation">installation</a> procedure and dependencies.</p>
+<h3 id="you-are-new-to-marlin">You are new to Marlin ?</h3>
+<ul>
+<li>Read the <a href="user-manual/introduction">introduction</a>.</li>
+<li>How to <a href="user-manual/getting-started">get started</a>?</li>
+</ul>
+<h3 id="you-are-developing-a-marlin-processor">You are developing a marlin Processor ?</h3>
+<ul>
+<li>The <a href="user-manual/processor-api">processor API</a></li>
+<li>The <a href="user-manual/xml-parser">XML steering file</a> doc</li>
+<li>The <a href="doxygen/annotated.html">classes documentation</a> (Doxygen)</li>
+</ul>
+<h3 id="you-want-to-port-your-processor-to-multi-threading">You want to port your processor to multi-threading ?</h3>
+<ul>
+<li><a href="user-manual/marlin-mt#introduction">Introduction to MarlinMT</a></li>
+<li><a href="user-manual/marlin-mt/#processor-thread-safety-tips-and-tricks">Tips and tricks</a> for thread safety</li>
+</ul>
               
             </div>
           </div>
@@ -160,11 +238,12 @@
 </div>
     <script>var base_url = '.';</script>
     <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
 
 </body>
 </html>
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-05-10 00:10:34
+Build Date UTC : 2019-05-18 18:00:28
 -->
