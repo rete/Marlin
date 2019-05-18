@@ -81,6 +81,22 @@
     <a class="current" href="./">Introduction</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#overview">Overview</a></li>
+    
+
+    <li class="toctree-l3"><a href="#marlin-usage">Marlin usage</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#the-marlin-executable">The Marlin executable</a></li>
+        
+            <li><a class="toctree-l4" href="#dumping-plugins">Dumping plugins</a></li>
+        
+            <li><a class="toctree-l4" href="#getting-a-template-steering-file">Getting a template steering file</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
                 <li class="">
@@ -155,7 +171,105 @@
           <div role="main">
             <div class="section">
               
-                
+                <p>Marlin [Modular Analysis and Reconstruction for the LINear collider] is a simple modular application framework for analysis and reconstruction code based on LCIO.</p>
+<h1 id="overview">Overview</h1>
+<p>The main purpose of Marlin is to facilitate the modular development of reconstruction and analysis code based on LCIO. As a lot of different groups are involved it should be simple and straight forward to have distributed development of modules and combine existing modules as needed in a larger application.
+The base class for a Marlin module is called <code>marlin::Processor</code>. It defines a set of callbacks that the user can implement in their subclasses. A steering file mechanism allows to activate the needed processors. These are then called for every event using the LCEvent as container for input and output data in terms of LCCollections:</p>
+<p><img alt="Overview" src="https://github.com/iLCSoft/Marlin/raw/master/doc/marlin_overview.gif" /></p>
+<p>The processors are compiled in shared libraries (i.e libMyProcessor.so) and loaded at runtime using the <code>marlin::PluginManager</code>. The libraries to use when running Marlin are exported in the environment variable <code>MARLIN_DLL</code>:</p>
+<pre><code class="shell">export MARLIN_DLL=./lib/libMyProcessor.so
+</code></pre>
+
+<p>or with multiple libraries:</p>
+<pre><code class="shell">export MARLIN_DLL=./lib/libMyProcessor.so:./libOtherProcessor.so
+</code></pre>
+
+<h1 id="marlin-usage">Marlin usage</h1>
+<h2 id="the-marlin-executable">The <code>Marlin</code> executable</h2>
+<p>The executable provided by the software is called <code>Marlin</code>. The current help command gives the following output:</p>
+<pre><code class="shell">$ Marlin -h
+Parsing command line ...
+ Usage: Marlin [OPTION] [FILE]...
+   runs a Marlin application
+
+ Running the application with a given steering file:
+   Marlin steer.xml   
+
+   Marlin [-h/-?]                print this help information
+   Marlin -x [steer.xml]         print an example steering file to output file file (default: marlin_steer.xml)
+
+ Example:
+ To create a new default steering file from any Marlin application, run
+     Marlin -x  mysteer.xml
+ Dynamic command line options may be specified in order to overwrite individual steering file parameters, e.g.:
+     Marlin --datasource.LCIOInputFiles=&quot;input1.slcio input2.slcio&quot; --geometry.CompactFile=mydetector.xml
+            --MyLCIOOutputProcessor.LCIOWriteMode=WRITE_APPEND --MyLCIOOutputProcessor.LCIOOutputFile=out.slcio steer.xml
+
+     NOTE: Dynamic options do NOT work together with Marlin options (-x, -f) nor with the MarlinGUI
+</code></pre>
+
+<p>The XML steering file list all configuration parameters of the different Marlin components:</p>
+<ul>
+<li>processors</li>
+<li>geometry</li>
+<li>data source</li>
+<li>global parameters</li>
+</ul>
+<p>The <code>&lt;execute&gt;</code> section of the steering file lists the processors to run sequentially in the application. </p>
+<p>For more information see <a href="../xml-parser/">XML parser documentation</a>.</p>
+<h2 id="dumping-plugins">Dumping plugins</h2>
+<p>It is sometimes very useful, before running a <code>Marlin</code> application, to dump the registered plugins. The executable <code>MarlinDumpPlugins</code> list all registered plugins in the Marlin framework and from all libraries listed in the <code>MARLIN_DLL</code> variable.</p>
+<p>Without <code>MARLIN_DLL</code> (possible output):</p>
+<pre><code class="shell">$ MarlinDumpPlugins
+[ MESSAGE &quot;PluginManager&quot;] ------------------------------------
+[ MESSAGE &quot;PluginManager&quot;]  ** Marlin plugin manager dump **
+[ MESSAGE &quot;PluginManager&quot;]  Processor plugins:
+[ MESSAGE &quot;PluginManager&quot;]  - CPUCrunching
+[ MESSAGE &quot;PluginManager&quot;]  - EventSelector
+[ MESSAGE &quot;PluginManager&quot;]  - LCIOOutputProcessor
+[ MESSAGE &quot;PluginManager&quot;]  - MemoryMonitor
+[ MESSAGE &quot;PluginManager&quot;]  - SimpleFastMCProcessor
+[ MESSAGE &quot;PluginManager&quot;]  - Statusmonitor
+[ MESSAGE &quot;PluginManager&quot;]  - TestProcessor
+[ MESSAGE &quot;PluginManager&quot;]  GeometryPlugin plugins:
+[ MESSAGE &quot;PluginManager&quot;]  - DD4hepGeometry
+[ MESSAGE &quot;PluginManager&quot;]  - EmptyGeometry
+[ MESSAGE &quot;PluginManager&quot;]  - GearGeometry
+[ MESSAGE &quot;PluginManager&quot;]  DataSource plugins:
+[ MESSAGE &quot;PluginManager&quot;]  - LCIO
+[ MESSAGE &quot;PluginManager&quot;]  - StdHep
+[ MESSAGE &quot;PluginManager&quot;] ----------------------------------
+</code></pre>
+
+<p>Using <code>MARLIN_DLL</code> variable:</p>
+<pre><code class="shell"># Contains a processor called 'MyProcessor'
+$ export MARLIN_DLL=./libProcessor.so
+$ MarlinDumpPlugins
+[ MESSAGE &quot;PluginManager&quot;] ------------------------------------
+[ MESSAGE &quot;PluginManager&quot;]  ** Marlin plugin manager dump **
+[ MESSAGE &quot;PluginManager&quot;]  Processor plugins:
+[ MESSAGE &quot;PluginManager&quot;]  - CPUCrunching
+[ MESSAGE &quot;PluginManager&quot;]  - EventSelector
+[ MESSAGE &quot;PluginManager&quot;]  - LCIOOutputProcessor
+[ MESSAGE &quot;PluginManager&quot;]  - MemoryMonitor
+[ MESSAGE &quot;PluginManager&quot;]  - SimpleFastMCProcessor
+[ MESSAGE &quot;PluginManager&quot;]  - Statusmonitor
+[ MESSAGE &quot;PluginManager&quot;]  - TestProcessor
+[ MESSAGE &quot;PluginManager&quot;]  - MyProcessor
+[ MESSAGE &quot;PluginManager&quot;]  GeometryPlugin plugins:
+[ MESSAGE &quot;PluginManager&quot;]  - DD4hepGeometry
+[ MESSAGE &quot;PluginManager&quot;]  - EmptyGeometry
+[ MESSAGE &quot;PluginManager&quot;]  - GearGeometry
+[ MESSAGE &quot;PluginManager&quot;]  DataSource plugins:
+[ MESSAGE &quot;PluginManager&quot;]  - LCIO
+[ MESSAGE &quot;PluginManager&quot;]  - StdHep
+[ MESSAGE &quot;PluginManager&quot;] ----------------------------------
+</code></pre>
+
+<h2 id="getting-a-template-steering-file">Getting a template steering file</h2>
+<p>As shown in the <code>Marlin</code> help command above, you can dump a steering file containing all parameters of all registered processors in Marlin and the processors listed in <code>MARLIN_DLL</code>:</p>
+<pre><code class="shell">$ Marlin -x steer.xml
+</code></pre>
               
             </div>
           </div>
