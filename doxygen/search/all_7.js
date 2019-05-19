@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['geardetector',['gearDetector',['../classmarlin_1_1ProcessorApi.html#aba4840cd8258486004c7e1fdcf5f0a8a',1,'marlin::ProcessorApi']]],
   ['geargeometry',['GearGeometry',['../classmarlin_1_1GearGeometry.html',1,'marlin']]],
   ['generaterandomseeds',['generateRandomSeeds',['../classmarlin_1_1RandomSeedManager.html#a79b5efc296360b47cf90dd13749fb73a',1,'marlin::RandomSeedManager']]],
   ['geometry',['geometry',['../classmarlin_1_1GeometryManager.html#a4257ccc9849a8077c559054aa60fd2ef',1,'marlin::GeometryManager']]],
@@ -9,15 +8,12 @@ var searchData=
   ['geometryplugin',['GeometryPlugin',['../classmarlin_1_1GeometryPlugin.html',1,'marlin::GeometryPlugin'],['../classmarlin_1_1GeometryPlugin.html#a38e9cee84218dac5edcaaa785203d2b7',1,'marlin::GeometryPlugin::GeometryPlugin()']]],
   ['get',['get',['../classmarlin_1_1StringParameters.html#aac2a0dfcfdc004fa4f3e07f38d7d9cf9',1,'marlin::StringParameters::get(const std::string &amp;key, T &amp;value) const'],['../classmarlin_1_1StringParameters.html#a322143c457d87d615f73346ce051e0d8',1,'marlin::StringParameters::get(const std::string &amp;key, std::vector&lt; T &gt; &amp;values) const']]],
   ['getattribute',['getAttribute',['../classmarlin_1_1XMLParser.html#a34858c39fcb860aaf2f4d76590bbadd1',1,'marlin::XMLParser']]],
-  ['getchisquaredminus',['getChiSquaredMinus',['../classmarlin_1_1ErrorOfSigma.html#a14ed1cbadcd749d504529ee45625a5e6',1,'marlin::ErrorOfSigma']]],
-  ['getchisquaredplus',['getChiSquaredPlus',['../classmarlin_1_1ErrorOfSigma.html#af336af4a84c4e860367f1aa760164054',1,'marlin::ErrorOfSigma']]],
   ['getdocument',['GetDocument',['../classTiXmlNode.html#adcb070acefcbaedaa0673d82e530538b',1,'TiXmlNode']]],
   ['getforcedruntimeoption',['getForcedRuntimeOption',['../classmarlin_1_1Processor.html#a0b0fe0197d977ee57323024afb9fa45a',1,'marlin::Processor']]],
   ['getlciointype',['getLCIOInType',['../classmarlin_1_1Parametrized.html#a97b4c36ff7fe69c82992d02e920ec1e4',1,'marlin::Parametrized']]],
   ['getlcioouttype',['getLCIOOutType',['../classmarlin_1_1Parametrized.html#aeb6651841982821e73262a5bca0bbeb5',1,'marlin::Parametrized']]],
   ['getparameter',['getParameter',['../classmarlin_1_1Parametrized.html#a22769ccaee2510f1dbc9be534470c15f',1,'marlin::Parametrized']]],
   ['getparameters',['getParameters',['../classmarlin_1_1IParser.html#ab59774f48976295413b2e83931f2c477',1,'marlin::IParser::getParameters()'],['../classmarlin_1_1Parser.html#af359191c6b0c4865342fc7fe9964e359',1,'marlin::Parser::getParameters()'],['../classmarlin_1_1XMLParser.html#a3c2a5590848614b0c6e6058a18229c48',1,'marlin::XMLParser::getParameters()']]],
-  ['getparticletype',['getParticleType',['../classmarlin_1_1SimpleParticleFactory.html#ac0fd79c9ba9d28f8108fca9fd96cdaee',1,'marlin::SimpleParticleFactory']]],
   ['getrandomseed',['getRandomSeed',['../classmarlin_1_1ProcessorApi.html#a4bbb8514b3f638c90c667f570bf6b44b',1,'marlin::ProcessorApi']]],
   ['gettext',['GetText',['../classTiXmlElement.html#af0f814ecbd43d50d4cdbdf4354d3da39',1,'TiXmlElement']]],
   ['getuserdata',['GetUserData',['../classTiXmlBase.html#a6559a530ca6763fc301a14d77ed28c17',1,'TiXmlBase::GetUserData()'],['../classTiXmlBase.html#aaaaefcef8c0e6e32f8920f4982b2daf3',1,'TiXmlBase::GetUserData() const']]],

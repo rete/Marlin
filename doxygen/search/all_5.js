@@ -11,7 +11,6 @@ var searchData=
   ['errorcol',['ErrorCol',['../classTiXmlDocument.html#adea69de889449a2587afb8ee043f43f5',1,'TiXmlDocument']]],
   ['errordesc',['ErrorDesc',['../classTiXmlDocument.html#aab511be262e84a003e3bb86f0215c8c2',1,'TiXmlDocument']]],
   ['errorid',['ErrorId',['../classTiXmlDocument.html#abd928b49a646c8ed53e0453c555d96a2',1,'TiXmlDocument']]],
-  ['errorofsigma',['ErrorOfSigma',['../classmarlin_1_1ErrorOfSigma.html',1,'marlin::ErrorOfSigma'],['../classmarlin_1_1ErrorOfSigma.html#ae7b41d5337dabefc0630ef1c825e43d8',1,'marlin::ErrorOfSigma::ErrorOfSigma()']]],
   ['errorrow',['ErrorRow',['../classTiXmlDocument.html#a062e5257128a7da31b0b2e38cd524600',1,'TiXmlDocument']]],
   ['eventmodifier',['EventModifier',['../classmarlin_1_1EventModifier.html',1,'marlin']]],
   ['eventselectorprocessor',['EventSelectorProcessor',['../classmarlin_1_1EventSelectorProcessor.html',1,'marlin::EventSelectorProcessor'],['../classmarlin_1_1EventSelectorProcessor.html#a9f595ab4d3f6c380d0ecda08244747d5',1,'marlin::EventSelectorProcessor::EventSelectorProcessor()']]],

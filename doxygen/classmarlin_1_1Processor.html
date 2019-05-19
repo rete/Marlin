@@ -84,14 +84,13 @@ Inheritance diagram for marlin::Processor:</div>
  <div class="center">
   <img src="classmarlin_1_1Processor.png" usemap="#marlin::Processor_map" alt=""/>
   <map id="marlin::Processor_map" name="marlin::Processor_map">
-<area href="classmarlin_1_1Parametrized.html" alt="marlin::Parametrized" shape="rect" coords="627,0,826,24"/>
+<area href="classmarlin_1_1Parametrized.html" alt="marlin::Parametrized" shape="rect" coords="522,0,721,24"/>
 <area href="classmarlin_1_1CPUCrunchingProcessor.html" title="Simple processor crunching CPU time for n milliseconds. " alt="marlin::CPUCrunchingProcessor" shape="rect" coords="0,112,199,136"/>
 <area href="classmarlin_1_1EventSelectorProcessor.html" title="Simple event selector processor. " alt="marlin::EventSelectorProcessor" shape="rect" coords="209,112,408,136"/>
 <area href="classmarlin_1_1LCIOOutputProcessor.html" title="Default output processor. " alt="marlin::LCIOOutputProcessor" shape="rect" coords="418,112,617,136"/>
 <area href="classmarlin_1_1MemoryMonitorProcessor.html" title="MemoryMonitorProcessor is a memory monitoring application for Marlin. " alt="marlin::MemoryMonitorProcessor" shape="rect" coords="627,112,826,136"/>
-<area href="classmarlin_1_1SimpleFastMCProcessor.html" title="A simple smearing &quot;Monte Carlo&quot; processor. " alt="marlin::SimpleFastMCProcessor" shape="rect" coords="836,112,1035,136"/>
-<area href="classmarlin_1_1Statusmonitor.html" title="Simple processor for writing out a status message every n-th event. " alt="marlin::Statusmonitor" shape="rect" coords="1045,112,1244,136"/>
-<area href="classmarlin_1_1TestProcessor.html" title="Simple processor for testing. " alt="marlin::TestProcessor" shape="rect" coords="1254,112,1453,136"/>
+<area href="classmarlin_1_1Statusmonitor.html" title="Simple processor for writing out a status message every n-th event. " alt="marlin::Statusmonitor" shape="rect" coords="836,112,1035,136"/>
+<area href="classmarlin_1_1TestProcessor.html" title="Simple processor for testing. " alt="marlin::TestProcessor" shape="rect" coords="1045,112,1244,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -583,7 +582,7 @@ processRun </dd>
 <p>Initialize the processor. </p>
 <p>Called at the begin of the job before anything is read. Use to initialize the processor, e.g. book histograms. </p>
 
-<p>Reimplemented in <a class="el" href="classmarlin_1_1SimpleFastMCProcessor.html#aea0d8a3a1bde4211398554449ba61e34">marlin::SimpleFastMCProcessor</a>, <a class="el" href="classmarlin_1_1LCIOOutputProcessor.html#a23c540ec3d9be10fc4e4b5431bfe64e4">marlin::LCIOOutputProcessor</a>, <a class="el" href="classmarlin_1_1MemoryMonitorProcessor.html#aa7d3b4ce08bfd0a5cd44c2ce39b8f76e">marlin::MemoryMonitorProcessor</a>, <a class="el" href="classmarlin_1_1TestProcessor.html#a642eda7da954ecd815df99f25a1c946b">marlin::TestProcessor</a>, <a class="el" href="classmarlin_1_1EventSelectorProcessor.html#aeb4c233b4075fc99c5f146c21ec96d78">marlin::EventSelectorProcessor</a>, <a class="el" href="classmarlin_1_1Statusmonitor.html#a2a01fb3ca1afe2677efad92aa9bb48c5">marlin::Statusmonitor</a>, and <a class="el" href="classmarlin_1_1CPUCrunchingProcessor.html#a7b59906fb597c07394f95c3c2dcf978b">marlin::CPUCrunchingProcessor</a>.</p>
+<p>Reimplemented in <a class="el" href="classmarlin_1_1LCIOOutputProcessor.html#a23c540ec3d9be10fc4e4b5431bfe64e4">marlin::LCIOOutputProcessor</a>, <a class="el" href="classmarlin_1_1MemoryMonitorProcessor.html#aa7d3b4ce08bfd0a5cd44c2ce39b8f76e">marlin::MemoryMonitorProcessor</a>, <a class="el" href="classmarlin_1_1TestProcessor.html#a642eda7da954ecd815df99f25a1c946b">marlin::TestProcessor</a>, <a class="el" href="classmarlin_1_1EventSelectorProcessor.html#aeb4c233b4075fc99c5f146c21ec96d78">marlin::EventSelectorProcessor</a>, <a class="el" href="classmarlin_1_1Statusmonitor.html#a2a01fb3ca1afe2677efad92aa9bb48c5">marlin::Statusmonitor</a>, and <a class="el" href="classmarlin_1_1CPUCrunchingProcessor.html#a7b59906fb597c07394f95c3c2dcf978b">marlin::CPUCrunchingProcessor</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classmarlin_1_1Processor.html#a1e85f5c5bad8928bedb2b1df520ee76d">baseInit()</a>.</p>
 
@@ -725,7 +724,7 @@ std::stringstream&amp; <a class="el" href="classmarlin_1_1Processor.html#a3d4211
 <p>Process an input event. </p>
 <p>Called for every event - the working horse. </p>
 
-<p>Reimplemented in <a class="el" href="classmarlin_1_1SimpleFastMCProcessor.html#aa4c8ea6b05fd5620870b527589098f20">marlin::SimpleFastMCProcessor</a>, <a class="el" href="classmarlin_1_1LCIOOutputProcessor.html#a07ab3e9f18f80ad76372cdfa17b674e2">marlin::LCIOOutputProcessor</a>, <a class="el" href="classmarlin_1_1TestProcessor.html#a5ab65c443465d9407bd5adca1d798c59">marlin::TestProcessor</a>, <a class="el" href="classmarlin_1_1Statusmonitor.html#a845784ae1226f43f2d4db27ee6d261cf">marlin::Statusmonitor</a>, <a class="el" href="classmarlin_1_1MemoryMonitorProcessor.html#ad1f4a9c63f04cd6a4dc1ab4ecccafa2f">marlin::MemoryMonitorProcessor</a>, <a class="el" href="classmarlin_1_1EventSelectorProcessor.html#a4f669851b0ccecc53c65e0f589881d66">marlin::EventSelectorProcessor</a>, and <a class="el" href="classmarlin_1_1CPUCrunchingProcessor.html#a72dd012f547e203c22fdfc15396a9281">marlin::CPUCrunchingProcessor</a>.</p>
+<p>Reimplemented in <a class="el" href="classmarlin_1_1LCIOOutputProcessor.html#a07ab3e9f18f80ad76372cdfa17b674e2">marlin::LCIOOutputProcessor</a>, <a class="el" href="classmarlin_1_1TestProcessor.html#a5ab65c443465d9407bd5adca1d798c59">marlin::TestProcessor</a>, <a class="el" href="classmarlin_1_1Statusmonitor.html#a845784ae1226f43f2d4db27ee6d261cf">marlin::Statusmonitor</a>, <a class="el" href="classmarlin_1_1MemoryMonitorProcessor.html#ad1f4a9c63f04cd6a4dc1ab4ecccafa2f">marlin::MemoryMonitorProcessor</a>, <a class="el" href="classmarlin_1_1EventSelectorProcessor.html#a4f669851b0ccecc53c65e0f589881d66">marlin::EventSelectorProcessor</a>, and <a class="el" href="classmarlin_1_1CPUCrunchingProcessor.html#a72dd012f547e203c22fdfc15396a9281">marlin::CPUCrunchingProcessor</a>.</p>
 
 </div>
 </div>

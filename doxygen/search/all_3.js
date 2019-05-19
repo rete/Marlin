@@ -13,7 +13,6 @@ var searchData=
   ['clockmeasures',['clockMeasures',['../classmarlin_1_1Sequence.html#aca5e6185c1994c4c481dcdb26d472843',1,'marlin::Sequence']]],
   ['clockmeasuresummary',['clockMeasureSummary',['../classmarlin_1_1Sequence.html#a1ed27674cb0ce1eb93b72414e656bc49',1,'marlin::Sequence']]],
   ['clone',['Clone',['../classTiXmlNode.html#a4508cc3a2d7a98e96a54cc09c37a78a4',1,'TiXmlNode::Clone()'],['../classTiXmlElement.html#a810ea8fa40844c01334e5af2a26794cb',1,'TiXmlElement::Clone()'],['../classTiXmlComment.html#a1f9f06e2ed3f77875093436193b16c16',1,'TiXmlComment::Clone()'],['../classTiXmlText.html#a98a20d7a4f1c1478e25e34921be24bfe',1,'TiXmlText::Clone()'],['../classTiXmlDeclaration.html#a35dc1455f69b79e81cae28e186944610',1,'TiXmlDeclaration::Clone()'],['../classTiXmlUnknown.html#a3dea7689de5b1931fd6657992948fde0',1,'TiXmlUnknown::Clone()'],['../classTiXmlDocument.html#a46a4dda6c56eb106d46d4046ae1e5353',1,'TiXmlDocument::Clone()'],['../classmarlin_1_1Processor.html#a6e9824ecab9436bd789348e6d6e06502aff24590464659ee8cdec688128c35f89',1,'marlin::Processor::Clone()']]],
-  ['clusterresolution',['ClusterResolution',['../structmarlin_1_1ClusterResolution.html',1,'marlin']]],
   ['column',['Column',['../classTiXmlBase.html#ad283b95d9858d5d78c334f4a61b07bb4',1,'TiXmlBase']]],
   ['conditionistrue',['conditionIsTrue',['../classmarlin_1_1LogicalExpressions.html#a53954733e35a85e4dae0a9e2edd6288d',1,'marlin::LogicalExpressions']]],
   ['constants',['constants',['../classmarlin_1_1Application.html#afdcdc1497afaf351ab421577636abc39',1,'marlin::Application']]],
@@ -21,7 +20,6 @@ var searchData=
   ['create',['create',['../classmarlin_1_1PluginManager.html#a637d123bd1f6bd8f4bc1ae6ee33d214c',1,'marlin::PluginManager']]],
   ['createitem',['createItem',['../classmarlin_1_1Sequence.html#a8949a36d64576cc91349f04530606377',1,'marlin::Sequence']]],
   ['createlogger',['createLogger',['../classmarlin_1_1Application.html#a32a44713e83354acca7752891cc53c01',1,'marlin::Application::createLogger()'],['../classmarlin_1_1LoggerManager.html#a2343a9ded6d465718b113c9a530ea64d',1,'marlin::LoggerManager::createLogger()'],['../classmarlin_1_1Logging.html#a71216e83ad67a98ff2dad9a547a6c3b6',1,'marlin::Logging::createLogger()']]],
-  ['createreconstructedparticle',['createReconstructedParticle',['../classmarlin_1_1IRecoParticleFactory.html#a5f1c80596f818ee3b09db4567a171694',1,'marlin::IRecoParticleFactory::createReconstructedParticle()'],['../classmarlin_1_1SimpleParticleFactory.html#a2c050bb3a0c06aadcb5ef9c552b409f7',1,'marlin::SimpleParticleFactory::createReconstructedParticle()']]],
   ['crunchfor',['crunchFor',['../classmarlin_1_1clock.html#adebbf0b4495a533501e7e15e6222de88',1,'marlin::clock']]],
   ['cstr',['CStr',['../classTiXmlPrinter.html#a859eede9597d3e0355b77757be48735e',1,'TiXmlPrinter']]]
 ];

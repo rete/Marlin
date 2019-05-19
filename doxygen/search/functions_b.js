@@ -11,6 +11,5 @@ var searchData=
   ['logger',['logger',['../classmarlin_1_1Application.html#a4e5dffd0b44c03ceea9dab604d223928',1,'marlin::Application::logger()'],['../classmarlin_1_1DataSourcePlugin.html#a672029270e97285c09eae4ab80fd6ef8',1,'marlin::DataSourcePlugin::logger()'],['../classmarlin_1_1PluginManager.html#a9f7301e90cd1e63c4ed8feb95dfee642',1,'marlin::PluginManager::logger()']]],
   ['loggermanager',['LoggerManager',['../classmarlin_1_1LoggerManager.html#ac33a972dffe1dcf4e02c6276f01b9106',1,'marlin::LoggerManager']]],
   ['logicalexpressions',['LogicalExpressions',['../classmarlin_1_1LogicalExpressions.html#aaf6b1462bb3a34629cfd9db2c6726731',1,'marlin::LogicalExpressions']]],
-  ['loglevelname',['logLevelName',['../classmarlin_1_1Processor.html#afab806e3ddaa4750aadfaec08dd36fb4',1,'marlin::Processor']]],
-  ['lowererror',['lowerError',['../classmarlin_1_1ErrorOfSigma.html#a5eea304e56dbf80281b418a8946c2097',1,'marlin::ErrorOfSigma']]]
+  ['loglevelname',['logLevelName',['../classmarlin_1_1Processor.html#afab806e3ddaa4750aadfaec08dd36fb4',1,'marlin::Processor']]]
 ];

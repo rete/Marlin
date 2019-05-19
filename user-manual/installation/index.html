@@ -1,207 +1,494 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Installation - Marlin</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Installation";
-    var mkdocs_page_input_path = "user-manual/installation.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Marlin</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">About</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../about/license/">License</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../about/contribute/">Contribute</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../about/citing/">Citing Marlin</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">User manual</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../introduction/">Introduction</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Installation</a>
-    <ul class="subnav">
-            
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../getting-started/">Getting started</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../geometry/">Geometry</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../data-source/">Data source</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../xml-parser/">XML parser</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../processor-api/">Processor API</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../marlin-mt/">Multi-threading with MarlinMT</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../doxygen/index.html">Reference manual</a>
-	    </li>
-          
-        </ul>
-      </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Marlin</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
-    
-      
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-          <li>User manual &raquo;</li>
         
-      
-    
-    <li>Installation</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              
-                
-              
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Installation - Marlin</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Marlin</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../about/license/">License</a>
+</li>
+                                    
+<li >
+    <a href="../../about/contribute/">Contribute</a>
+</li>
+                                    
+<li >
+    <a href="../../about/citing/">Citing Marlin</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../introduction/">Introduction</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../getting-started/">Getting started</a>
+</li>
+                                    
+<li >
+    <a href="../geometry/">Geometry</a>
+</li>
+                                    
+<li >
+    <a href="../data-source/">Data source</a>
+</li>
+                                    
+<li >
+    <a href="../xml-parser/">XML parser</a>
+</li>
+                                    
+<li >
+    <a href="../processor-api/">Processor API</a>
+</li>
+                                    
+<li >
+    <a href="../marlin-mt/">Multi-threading with MarlinMT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../doxygen/index.html">Reference manual</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../introduction/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../getting-started/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../getting-started/" class="btn btn-neutral float-right" title="Getting started">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../introduction/" class="btn btn-neutral" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
         </div>
-      </div>
 
-    </section>
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#dependencies">Dependencies</a></li>
+            <li><a href="#installation-order">Installation order</a></li>
+            <li><a href="#qt">Qt</a></li>
+            <li><a href="#ilcutil">iLCUtil</a></li>
+            <li><a href="#xercesc">XercesC</a></li>
+            <li><a href="#root">ROOT</a></li>
+            <li><a href="#geant4">Geant4</a></li>
+            <li><a href="#gear">Gear</a></li>
+            <li><a href="#lcio">LCIO</a></li>
+            <li><a href="#dd4hep">DD4hep</a></li>
+        <li class="main "><a href="#installing-marlin">Installing Marlin</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-  </div>
+<h1 id="dependencies">Dependencies</h1>
+<p>Marlin has a few dependencies:</p>
+<ul>
+<li><a href="https://github.com/iLCSoft/iLCUtil">iLCUtil</a>: For the streamlog library and CMake macros</li>
+<li><a href="https://github.com/iLCSoft/lcio">LCIO</a>: The event data model</li>
+</ul>
+<p>Marlin can also be compiled with optional packages to enable additional components:</p>
+<ul>
+<li><a href="https://github.com/iLCSoft/gear">Gear</a>: The old geometry package for linear colliders (deprecated)</li>
+<li><a href="https://github.com/AIDASoft/DD4hep">DD4hep</a>: The new geometry package for high energy physics</li>
+<li><a href="www.qt.io">Qt</a>: To build the Marlin graphical user interface</li>
+</ul>
+<h2 id="installation-order">Installation order</h2>
+<p>If you wish to install only the required packages, the installation order is the following:</p>
+<ul>
+<li>iLCUtil</li>
+<li>LCIO. Dependencies:<ul>
+<li>iLCUtil</li>
+</ul>
+</li>
+</ul>
+<p>With all optional dependencies, the order would be the following:</p>
+<ul>
+<li>Qt</li>
+<li>iLCUtil</li>
+<li>XercesC</li>
+<li>ROOT. Dependencies:<ul>
+<li>Qt (optional)</li>
+</ul>
+</li>
+<li>Geant4. Dependencies:<ul>
+<li>Qt (optional)</li>
+<li>XercesC (optional)</li>
+</ul>
+</li>
+<li>Gear. Dependencies:<ul>
+<li>ROOT (optional)</li>
+</ul>
+</li>
+<li>LCIO. Dependencies:<ul>
+<li>iLCUtil</li>
+<li>ROOT (optional)</li>
+</ul>
+</li>
+<li>DD4hep. Dependencies:<ul>
+<li>ROOT</li>
+<li>Geant4 (optional but recommended)</li>
+<li>XercesC (optional but recommended)</li>
+<li>Gear (optional)</li>
+<li>LCIO (optional but recommended)</li>
+</ul>
+</li>
+</ul>
+<h2 id="qt">Qt</h2>
+<p>Qt can be downloaded with <code>git</code>:</p>
+<pre><code class="shell">$ git clone git://code.qt.io/qt/qt.git
+$ cd qt
+</code></pre>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../introduction/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../getting-started/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+<p>We recommend to use the version 4.7.4:</p>
+<pre><code class="shell">$ git checkout v4.7.4
+</code></pre>
+
+<p>Many options are available for compiling Qt. We recommend the following:</p>
+<pre><code class="shell">$ mkdir install
+$ ./configure \
+    -prefix ./install \
+    -no-webkit \
+    -opensource \
+    -confirm-license \
+    -prefix-install \
+    -fast \
+    -make libs \
+    -no-separate-debug-info \
+    -no-xkb \
+    -no-xinerama
+$ make install
+</code></pre>
+
+<h2 id="ilcutil">iLCUtil</h2>
+<p>iLCUtil can be downloaded with <code>git</code>:</p>
+<pre><code class="shell">$ git clone https://github.com/rete/iLCUtil.git
+$ cd iLCUtil
+</code></pre>
+
+<p>We recommend to use the development branch <code>streamlog-thread-safe</code></p>
+<pre><code class="shell">$ git checkout streamlog-thread-safe
+</code></pre>
+
+<p>To compile the package:</p>
+<pre><code class="shell">$ mkdir build
+$ cd build
+$ cmake ..
+$ make install
+</code></pre>
+
+<h2 id="xercesc">XercesC</h2>
+<p>XercesC can be downloaded with <code>git</code>:</p>
+<pre><code class="shell">$ git clone https://github.com/apache/xerces-c.git
+$ cd xerces-c
+</code></pre>
+
+<p>We recommend to use the version <code>3.2.2</code></p>
+<pre><code class="shell">$ git checkout Xerces-C_3_2_2
+</code></pre>
+
+<p>To compile the package:</p>
+<pre><code class="shell">$ mkdir build
+$ cd build
+$ cmake ..
+$ make install
+</code></pre>
+
+<h2 id="root">ROOT</h2>
+<p>ROOT can be downloaded with <code>git</code>:</p>
+<pre><code class="shell">$ git clone https://github.com/root-project/root.git
+$ cd root
+</code></pre>
+
+<p>We recommend to use the version <code>v6-08-06</code>:</p>
+<pre><code class="shell">$ git checkout v6-08-06
+</code></pre>
+
+<p>To compile the package:</p>
+<pre><code class="shell">$ mkdir root_build
+$ cd root_build
+$ cmake \
+  -Dgsl_shared=ON \
+  -Dgdml=ON \
+  -Dminuit2=ON \
+  -Droofit=ON \
+  -Dunuran=ON \
+  -Dxrootd=ON \
+  -Dbuiltin_xrootd=OFF \
+  -Dfortran=OFF \
+  -Dmysql=OFF \
+  ..
+$ make install
+</code></pre>
+
+<p>For more details on ROOT dependencies, see <a href="https://root.cern.ch/build-prerequisites">https://root.cern.ch/build-prerequisites</a>.</p>
+<h2 id="geant4">Geant4</h2>
+<p>Geant4 can be downloaded with <code>git</code>:</p>
+<pre><code class="shell">$ git clone https://gitlab.cern.ch/geant4/geant4.git
+$ cd geant4
+</code></pre>
+
+<p>We recommend to use the version <code>v10.3.2</code>:</p>
+<pre><code class="shell">$ git checkout v10.3.2
+</code></pre>
+
+<p>To compile the package:</p>
+<pre><code class="shell">$ mkdir geant4_build
+$ cd geant4_build
+$ cmake \
+  -DGEANT4_INSTALL_DATA=ON \
+  -DGEANT4_USE_SYSTEM_EXPAT=OFF \
+  -DGEANT4_USE_OPENGL_X11=ON \
+  -DGEANT4_USE_QT=ON \
+  -DGEANT4_BUILD_CXXSTD=&quot;c++11&quot; \
+  -DGEANT4_USE_SYSTEM_CLHEP=OFF \
+  -DQT_QMAKE_EXECUTABLE=/path/to/Qt/bin/qmake \
+  -DXERCESC_ROOT_DIR=/path/to/XercesC \
+  -DGEANT4_USE_GDML=ON \
+  ..
+$ make install
+</code></pre>
+
+<h2 id="gear">Gear</h2>
+<p>Gear can be downloaded with <code>git</code>:</p>
+<pre><code class="shell">$ git clone https://github.com/iLCSoft/gear.git
+$ cd gear
+</code></pre>
+
+<p>We recommend to use the version <code>v01-08</code>:</p>
+<pre><code class="shell">$ git checkout v01-08
+</code></pre>
+
+<p>To compile the package:</p>
+<pre><code class="shell">$ mkdir build
+$ cd build
+$ cmake \
+  -DINSTALL_DOC=OFF \
+  -DGEAR_TGEO=ON \
+  ..
+$ make install
+</code></pre>
+
+<h2 id="lcio">LCIO</h2>
+<p>LCIO can be downloaded with <code>git</code>:</p>
+<pre><code class="shell">$ git clone https://github.com/rete/lcio.git
+$ cd lcio
+</code></pre>
+
+<p>We recommend to use the development branch <code>lcio-thread-safe</code></p>
+<pre><code class="shell">$ git checkout lcio-thread-safe
+</code></pre>
+
+<p>To compile the package:</p>
+<pre><code class="shell">$ mkdir build
+$ cd build
+$ cmake \
+  -DINSTALL_JAR=OFF \
+  -DLCIO_JAVA_USE_MAVEN=OFF \
+  -DBUILD_LCIO_EXAMPLES=ON \
+  -DBUILD_F77_TESTJOBS=OFF \
+  -DLCIO_GENERATE_HEADERS=OFF \
+  -DBUILD_ROOTDICT=ON \
+  ..
+$ make install
+</code></pre>
+
+<h2 id="dd4hep">DD4hep</h2>
+<p>DD4hep can be downloaded with <code>git</code>:</p>
+<pre><code class="shell">$ git clone https://github.com/AIDASoft/DD4hep.git
+$ cd DD4hep
+</code></pre>
+
+<p>We recommend to use the version <code>v01-07-02</code></p>
+<pre><code class="shell">$ git checkout v01-07-02
+</code></pre>
+
+<p>To compile the package:</p>
+<pre><code class="shell">$ mkdir build
+$ cd build
+$ cmake \
+  -DDD4HEP_USE_GEANT4=ON \
+  -DDD4HEP_USE_LCIO=ON \
+  -DDD4HEP_USE_XERCESC=ON \
+  -DDD4HEP_USE_PYROOT=OFF \
+  -DDD4HEP_USE_GEAR=ON \
+  -DDD4HEP_USE_BOOST=ON \
+  -DDD4HEP_USE_CXX11=ON \
+  ..
+$ make install
+</code></pre>
+
+<h1 id="installing-marlin">Installing Marlin</h1>
+<p>Marlin can be downloaded with <code>git</code>:</p>
+<pre><code class="shell">$ git clone https://github.com/rete/Marlin.git
+$ cd Marlin
+</code></pre>
+
+<p>We recommend to use the development branch <code>marlin-mt</code></p>
+<pre><code class="shell">$ git checkout marlin-mt
+</code></pre>
+
+<p>To compile the package without optional dependencies:</p>
+<pre><code class="shell">$ mkdir build
+$ cd build
+$ cmake \
+  -DMARLIN_DD4HEP=OFF \
+  -DMARLIN_GEAR=OFF \
+  ..
+$ make install
+</code></pre>
+
+<p>With optional dependencies:</p>
+<pre><code class="shell">$ mkdir build
+$ cd build
+$ cmake \
+  -DMARLIN_DD4HEP=ON \
+  -DMARLIN_GEAR=ON \
+  ..
+$ make install
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="../../search/main.js" defer></script>
 
-</body>
+    </body>
 </html>

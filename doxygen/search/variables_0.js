@@ -14,7 +14,6 @@ var searchData=
   ['_5floggermgr',['_loggerMgr',['../classmarlin_1_1Application.html#aa3ae8c605972d6edef4459edd75de235',1,'marlin::Application']]],
   ['_5floglevelname',['_logLevelName',['../classmarlin_1_1Processor.html#a84c2ba2bfd62a1dded6a1063d8dbdaf1',1,'marlin::Processor']]],
   ['_5fmap',['_map',['../classmarlin_1_1StringParameters.html#a57b12116d1220edd90ddfb5a85f6e88b',1,'marlin::StringParameters']]],
-  ['_5fn',['_n',['../classmarlin_1_1ErrorOfSigma.html#ab63edd7ef4330b37ec320bab497c1370',1,'marlin::ErrorOfSigma']]],
   ['_5fname',['_name',['../classmarlin_1_1Parameter.html#af273f4a5651b82bd65cfe6575959a5eb',1,'marlin::Parameter']]],
   ['_5foptional',['_optional',['../classmarlin_1_1Parameter.html#a746762ef64f46f5712c3123d381d8dd9',1,'marlin::Parameter']]],
   ['_5fparameters',['_parameters',['../classmarlin_1_1Processor.html#aa3c9d4bfa1dbf5c8203fb7317b9f2d33',1,'marlin::Processor']]],

@@ -20,6 +20,5 @@ var searchData=
   ['tixmltext',['TiXmlText',['../classTiXmlText.html',1,'']]],
   ['tixmlunknown',['TiXmlUnknown',['../classTiXmlUnknown.html',1,'']]],
   ['tixmlvisitor',['TiXmlVisitor',['../classTiXmlVisitor.html',1,'']]],
-  ['tokenizer',['Tokenizer',['../classmarlin_1_1Tokenizer.html',1,'marlin']]],
-  ['trackresolution',['TrackResolution',['../structmarlin_1_1TrackResolution.html',1,'marlin']]]
+  ['tokenizer',['Tokenizer',['../classmarlin_1_1Tokenizer.html',1,'marlin']]]
 ];

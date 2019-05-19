@@ -1,187 +1,157 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Introduction - Marlin</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Introduction - Marlin</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Introduction";
-    var mkdocs_page_input_path = "user-manual/introduction.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
 
-<body class="wy-body-for-nav" role="document">
+    <body>
 
-  <div class="wy-grid-for-nav">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
 
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Marlin</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Marlin</a>
+                </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">About</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../about/license/">License</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../about/contribute/">Contribute</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../about/citing/">Citing Marlin</a>
-                </li>
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../about/license/">License</a>
+</li>
+                                    
+<li >
+    <a href="../../about/contribute/">Contribute</a>
+</li>
+                                    
+<li >
+    <a href="../../about/citing/">Citing Marlin</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../installation/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../getting-started/">Getting started</a>
+</li>
+                                    
+<li >
+    <a href="../geometry/">Geometry</a>
+</li>
+                                    
+<li >
+    <a href="../data-source/">Data source</a>
+</li>
+                                    
+<li >
+    <a href="../xml-parser/">XML parser</a>
+</li>
+                                    
+<li >
+    <a href="../processor-api/">Processor API</a>
+</li>
+                                    
+<li >
+    <a href="../marlin-mt/">Multi-threading with MarlinMT</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../doxygen/index.html">Reference manual</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../about/citing/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../installation/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#overview">Overview</a></li>
+        <li class="main "><a href="#marlin-usage">Marlin usage</a></li>
+            <li><a href="#the-marlin-executable">The Marlin executable</a></li>
+            <li><a href="#dumping-plugins">Dumping plugins</a></li>
+            <li><a href="#getting-a-template-steering-file">Getting a template steering file</a></li>
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">User manual</span>
-    <ul class="subnav">
-                <li class=" current">
-                    
-    <a class="current" href="./">Introduction</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#overview">Overview</a></li>
-    
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <li class="toctree-l3"><a href="#marlin-usage">Marlin usage</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#the-marlin-executable">The Marlin executable</a></li>
-        
-            <li><a class="toctree-l4" href="#dumping-plugins">Dumping plugins</a></li>
-        
-            <li><a class="toctree-l4" href="#getting-a-template-steering-file">Getting a template steering file</a></li>
-        
-        </ul>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../installation/">Installation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../getting-started/">Getting started</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../geometry/">Geometry</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../data-source/">Data source</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../xml-parser/">XML parser</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../processor-api/">Processor API</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../marlin-mt/">Multi-threading with MarlinMT</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../doxygen/index.html">Reference manual</a>
-	    </li>
-          
-        </ul>
-      </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Marlin</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
-    
-      
-        
-          <li>User manual &raquo;</li>
-        
-      
-    
-    <li>Introduction</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              
-                <p>Marlin [Modular Analysis and Reconstruction for the LINear collider] is a simple modular application framework for analysis and reconstruction code based on LCIO.</p>
+<p>Marlin (<strong>M</strong>odular <strong>A</strong>nalysis and <strong>R</strong>econstruction for the <strong>LIN</strong>ear collider) is a simple modular application framework for analysis and reconstruction code based on LCIO.</p>
 <h1 id="overview">Overview</h1>
 <p>The main purpose of Marlin is to facilitate the modular development of reconstruction and analysis code based on LCIO. As a lot of different groups are involved it should be simple and straight forward to have distributed development of modules and combine existing modules as needed in a larger application.
 The base class for a Marlin module is called <code>marlin::Processor</code>. It defines a set of callbacks that the user can implement in their subclasses. A steering file mechanism allows to activate the needed processors. These are then called for every event using the LCEvent as container for input and output data in terms of LCCollections:</p>
 <p><img alt="Overview" src="https://github.com/iLCSoft/Marlin/raw/master/doc/marlin_overview.gif" /></p>
 <p>The processors are compiled in shared libraries (i.e libMyProcessor.so) and loaded at runtime using the <code>marlin::PluginManager</code>. The libraries to use when running Marlin are exported in the environment variable <code>MARLIN_DLL</code>:</p>
-<pre><code class="shell">export MARLIN_DLL=./lib/libMyProcessor.so
+<pre><code class="shell">$ export MARLIN_DLL=./lib/libMyProcessor.so
 </code></pre>
 
-<p>or with multiple libraries:</p>
-<pre><code class="shell">export MARLIN_DLL=./lib/libMyProcessor.so:./libOtherProcessor.so
+<p>or with multiple libraries (split by <code>:</code>):</p>
+<pre><code class="shell">$ export MARLIN_DLL=./lib/libMyProcessor.so:./libOtherProcessor.so
 </code></pre>
 
 <h1 id="marlin-usage">Marlin usage</h1>
@@ -215,7 +185,7 @@ Parsing command line ...
 <li>data source</li>
 <li>global parameters</li>
 </ul>
-<p>The <code>&lt;execute&gt;</code> section of the steering file lists the processors to run sequentially in the application. </p>
+<p>The <code>&lt;execute&gt;</code> section of the steering file lists the processors to run sequentially in the application.</p>
 <p>For more information see <a href="../xml-parser/">XML parser documentation</a>.</p>
 <h2 id="dumping-plugins">Dumping plugins</h2>
 <p>It is sometimes very useful, before running a <code>Marlin</code> application, to dump the registered plugins. The executable <code>MarlinDumpPlugins</code> list all registered plugins in the Marlin framework and from all libraries listed in the <code>MARLIN_DLL</code> variable.</p>
@@ -243,7 +213,7 @@ Parsing command line ...
 
 <p>Using <code>MARLIN_DLL</code> variable:</p>
 <pre><code class="shell"># Contains a processor called 'MyProcessor'
-$ export MARLIN_DLL=./libProcessor.so
+$ export MARLIN_DLL=./lib/libMyProcessor.so
 $ MarlinDumpPlugins
 [ MESSAGE &quot;PluginManager&quot;] ------------------------------------
 [ MESSAGE &quot;PluginManager&quot;]  ** Marlin plugin manager dump **
@@ -269,53 +239,83 @@ $ MarlinDumpPlugins
 <h2 id="getting-a-template-steering-file">Getting a template steering file</h2>
 <p>As shown in the <code>Marlin</code> help command above, you can dump a steering file containing all parameters of all registered processors in Marlin and the processors listed in <code>MARLIN_DLL</code>:</p>
 <pre><code class="shell">$ Marlin -x steer.xml
-</code></pre>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../installation/" class="btn btn-neutral float-right" title="Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../../about/citing/" class="btn btn-neutral" title="Citing Marlin"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
+</code></pre></div>
         </div>
-      </div>
 
-    </section>
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
-  </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../../about/citing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../installation/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="../../search/main.js" defer></script>
 
-</body>
+    </body>
 </html>
