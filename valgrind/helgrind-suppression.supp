@@ -25,7 +25,13 @@
    fun:~_Result
 }
 
-
+{
+   std::string destructor
+   Helgrind:Race
+   fun:_M_is_local
+   fun:_M_dispose
+   fun:~basic_string
+}
 
 
 
